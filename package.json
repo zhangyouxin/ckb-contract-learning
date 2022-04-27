@@ -22,9 +22,12 @@
     "typescript": "~4.6"
   },
   "scripts": {
-    "go": "yarn clean && yarn build && yarn start",
+    "go": "yarn rebuild && yarn start",
+    "go:signable": "node build/src/SignableScript.js",
+    "go:signable:clean": "yarn rebuild && node build/src/SignableScript.js",
     "start": "node build/src/main.js",
     "clean": "rimraf coverage build tmp",
+    "rebuild": "yarn clean && yarn build",
     "prebuild": "npm run lint",
     "build": "tsc -p tsconfig.json",
     "build:watch": "tsc -w -p tsconfig.json",
@@ -41,8 +44,9 @@
     "@ckb-lumos/common-scripts": "^0.17.0-rc9",
     "@ckb-lumos/hd": "^0.17.0-rc9",
     "@ckb-lumos/helpers": "^0.17.0-rc9",
-    "@ckb-lumos/lumos": "^0.18.0-rc6",
+    "@ckb-lumos/lumos": "^0.17.0-rc10",
     "@ckb-lumos/rpc": "^0.17.0-rc9",
+    "p-timeout": "^5.0.2",
     "tslib": "~2.3.1"
   },
   "volta": {

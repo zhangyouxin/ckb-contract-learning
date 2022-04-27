@@ -1,8 +1,7 @@
-import { Cell, CellCollector, CellProvider, Indexer, QueryOptions, Script, utils } from "@ckb-lumos/base";
+import { CellCollector, CellProvider, QueryOptions } from "@ckb-lumos/base";
 import { Indexer as CkbIndexer } from "@ckb-lumos/ckb-indexer";
 import { key } from "@ckb-lumos/hd";
 import { generateSecp256k1Blake160Address, parseAddress } from "@ckb-lumos/helpers";
-import { debug } from "console";
 
 const privateKey = "0xd00c06bfd800d27397002dca6fb0993d5ba6399b4238b2f29ee9deb97593d2bc"
 class PureCkbCellProvider implements CellProvider {

@@ -17,7 +17,8 @@
     "noUnusedParameters": false,
     "noImplicitAny": false,
     "noImplicitThis": false,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "allowJs": true
   },
   "include": [
     "src/**/*",
